@@ -1,0 +1,252 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10vw;
+    border-radius: 25px;
+ 
+}
+th{
+    border: 3px solid #b1a5a5 !important;
+    padding: 8px;
+    text-align: left;
+    width: 200px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-style:normal;
+    text-align: center;
+    background-color: #ea0c0c86 !important;
+    opacity: 0.8;
+
+}
+td {
+    border: 3px solid #b1a5a5 !important;
+    padding: 8px;
+    text-align: left;
+    width: 200px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    background-color: #adababbd !important;
+    /* opacity: 0.8; */
+
+}
+.inpdim{
+    width: 20%;
+    padding: 5px;
+    margin-top: 5vh;
+    margin-left: 63vw;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    border: none;
+   font-size: 1.7vw;
+}
+
+/* /////Modal--/ */
+
+.container {
+    border: 2px solid;
+    margin-left: 20vw;
+    margin-top: 0vh;
+    border-radius: 10px;
+    background-color: rgb(237, 122, 7);
+}
+
+.form {
+    align-items: center;
+    margin-top: 1vh;
+    margin-left: 8vw;
+}
+
+.dialogForm {
+    margin-top: 3vh;
+    height: 65vh;
+    width: 85vw;
+}
+
+.alert {
+    font-size: 1.2vw;
+    margin-left:5vw;
+}
+
+.label-form{
+    font-size: 1.8vw;
+    line-height: 7vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-input {
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.5vw;
+}
+#inpname {
+    margin-left:2vw;
+}
+
+#inpemail {
+    margin-left:2vw;
+}
+
+#inpdob {
+    margin-left:2vw;
+    width: 28%;
+}
+
+#inpphonenumber {
+    margin-left:2vw;
+}
+
+.btn-dialog {
+    font-size: 1.7vw;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#btn-dailog1 {
+    margin-left: 10vw;
+}
+
+#btn-dailog2 {
+    margin-left: 5vw;
+    margin-top: 3vh;
+   background-color: #0408f3;
+   color: aliceblue;
+}
+
+#exampleModal {
+    margin-left: 25vw;
+    width: 75vw;
+}
+
+.btn2 {
+    margin-left: 3vw;
+}
+
+@media screen and (max-width:800px){
+    table {
+        width: 98%;
+      margin-left:1vw;
+        border-radius: 15px;
+    }
+    th,
+    td {
+        width: 100px;    
+        font-weight: 100;
+        font-size: 2vw;
+    }
+    .inpdim{  
+        margin-left: 77vw;
+       font-size: 2.7vw;
+    }
+    
+    #exampleModal {
+        margin-left: 15vw;
+        width:100vw;
+    }
+    .dialogForm {
+        margin-top: 3vh;
+        height: 65vh;
+        width: 65vw;
+        /* margin-bottom: 20px; */
+    }
+    .label-form {
+        font-size: 3.1vw;
+        line-height: 6vh;
+    }
+    .form-input {
+        font-size: 2.3vw;
+    }
+    #inpname {
+        margin-left:12vw;
+    }
+    
+    #inpemail {
+        margin-left:12vw;
+    }
+    
+    #inpdob {
+        margin-left: 12vw;
+        width: 60%;
+    }
+    #inpphonenumber {
+        margin-left: 12vw;
+    }
+    .btn-dialog {
+        font-size: 2.7vw;
+    }
+    #btn-dailog1 {
+        margin-left: 12vw;
+    }
+    
+    #btn-dailog2 {
+        margin-left: 5vw;
+        margin-top: 4vh;
+    }   
+}
+
+@media screen and (max-width:430px) {
+    table {
+        width: 100%;
+      margin-left: 0px;
+        border-radius: 15px;
+    }
+    th,
+    td {
+        border: 3px solid #b1a5a5 !important;
+        padding: 1px;
+        width: 60px;    
+        font-weight: 100;
+        font-size: 2.5vw;
+    }
+    #exampleModal {
+        margin-left: 5.5vw;
+        width:90vw;
+    }
+    .dialogForm {
+        margin-top: 3vh;
+        height: 65vh;
+        width: 65vw;
+        margin-left: 0px;
+    }
+    .label-form {
+        font-size: 4vw;
+    }
+    .form-input {
+        font-size: 3.5vw;
+    }
+    #inpname {
+        margin-left: 10vw;
+    }
+    
+    #inpemail {
+        margin-left: 10vw;
+    }
+    
+    #inpdob {
+        margin-left: 8.5vw;
+        width: 75%;
+    }
+    #inpphonenumber {
+        margin-left: 9vw;
+    }
+    .btn-dialog {
+        font-size: 3.7vw;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    #btn-dailog1 {
+        margin-left: 25vw;
+    }
+    
+    #btn-dailog2 {
+        margin-left: 5vw;
+        margin-top: 3vh;
+    } 
+}

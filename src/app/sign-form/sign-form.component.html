@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row content">
+    <form [formGroup]="valide" (ngSubmit)="onSign()" class="" autocomplete="off">
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label label-form">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control form-inp" id="inpemail" controls formControlName="email">
+        </div>
+        <div class="alert">
+          <span *ngIf=" (r['email'].touched ||r['email'].dirty) ">
+            <span class="text-danger" *ngIf="r['email'].errors?.['required'] ">
+              Please fill the Email
+            </span>
+            <span class="text-danger" *ngIf="r['email'].errors?.['pattern'] ">
+              Email is Invalid
+            </span>
+            <span class="text-danger" *ngIf="r['email'].errors?.['maxlength'] ">
+              Maxmium 15 Characters Only
+            </span>
+          </span>
+        </div>
+
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label label-form">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control form-inp" id="inppassword" controls formControlName="password">
+        </div>
+        <div class="alert">
+          <span *ngIf=" (r['password'].touched ||r['password'].dirty) ">
+            <span class="text-danger" *ngIf="r['password'].errors?.['required'] ">
+              Please fill the Password
+            </span>
+            <span class="text-danger" *ngIf="r['password'].errors?.['pattern'] ">
+              Password must contain at least one uppercase<br> letter,
+              one lowercase letter, one special character, <br>
+              and no spaces
+            </span>
+            <span class="text-danger" *ngIf="r['password'].errors?.['maxlength'] ">
+              Maxmium-10 Characters Only
+            </span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary btn-lg ">Sign-in</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,74 @@
+.content{
+    margin-left: 15vw;
+    margin-top: 17vh;
+    overflow: hidden;
+    overflow-y: hidden !important;
+    
+}
+.label-form{
+    font-size: 2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form-inp{
+    width: 40%;
+    outline: none;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 1.5vw;
+}
+.btn{
+    font-size: 1.5vw;
+    margin-left: 10vw; 
+    margin-top: 3vh;
+}
+.error-form{
+    margin-left: 20vw;
+    font-size: 1.3vw;
+}
+.alert{
+    font-size: 1.3vw;
+    margin-left: 14vw;
+}
+@media screen and (max-width:800px){
+    .content{
+        margin-left: 25vw;
+    }
+    .label-form{
+        font-size: 2.8vw;
+    }
+    .form-inp{
+        width: 50%;
+        font-size: 2.5vw;
+    }
+    .btn{
+        font-size: 2.5vw;
+    }
+    .error-form{
+        font-size: 2vw;
+    }
+
+}
+@media screen and (max-width:430px){
+    .content{
+        margin-left: 25vw;
+        margin-top: 20vh;
+    }
+    .label-form{
+        font-size: 4vw;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .form-inp{
+        width: 70%;
+        font-size: 3.5vw;
+    }
+    .btn{
+        font-size: 3.5vw;
+    }
+    .error-form{
+        margin-left: 15vw;
+        font-size: 3vw;
+    }
+
+}

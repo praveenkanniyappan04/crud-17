@@ -1,0 +1,90 @@
+.btn{
+    display: flex;
+   gap: 1.5vw;
+    margin-top: 10vh;
+    margin-left: 60vw;
+    border: none;
+}
+.btn1{
+    font-size:1.7vw;
+    padding: 5px;
+    border-radius: 5px;
+}
+.btn2{
+    font-size: 1.7vw;
+    padding: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+} 
+.active{
+    background-color: red;  
+    color: aliceblue; 
+}
+.nav{
+display: flex;
+justify-content: space-evenly;
+margin-top: 3vh;
+padding: 10px;
+font-weight: bolder;
+font-family: 'Times New Roman', Times, serif;
+}
+.btn3{
+    font-size: 1.7vw;
+    padding: 5px;
+   background-color:darkorange;
+    border-radius: 5px; 
+}
+.btn3:hover{
+    background-color: chocolate;
+}
+.label-1{
+    font-size: 1.5vw;
+    color: rgb(12, 53, 253);
+}
+@media screen and (max-width:800px){
+    .btn{
+        margin-top: 5vh;
+        margin-left: 60vw;
+    }
+    .btn1{
+        font-size:2.2vw;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .btn2{
+        font-size: 2.2vw;
+        padding: 5px;
+        border-radius: 5px;
+    } 
+        .btn3{
+            font-size: 2.5vw;
+        }
+        .label-1{
+            font-size: 2.5vw;
+        }
+}
+@media screen and (max-width:430px){
+
+    .btn{
+        margin-top: 5vh;
+        margin-left: 60vw;
+    }
+    .btn1{
+        font-size:3.7vw;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .btn2{
+        font-size: 3.7vw;
+        padding: 5px;
+        border-radius: 5px;
+    } 
+
+    .btn3{
+        font-size: 2.5vw;
+    }
+    .label-1{
+        font-size: 2.5vw;
+    }
+
+}

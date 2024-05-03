@@ -1,0 +1,125 @@
+<div>
+    <div class="d-flex">
+        <input type="search" [(ngModel)]="searchText" (keyup)="filterUser()" class="inpdim" placeholder="Search">
+       </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>PhoneNumber</th>
+                <th>Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let user of userList | paginate: { itemsPerPage: 8, currentPage: p };let i = index">
+                <td>{{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.dob}}</td>
+                <td>{{user.phonenumber}}</td>
+                <td><button type="button" class="btn btn-primar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-regular fa-pen-to-square" (click)="handle(user)"></i></button>
+                    <button type="button" class="btn btn-primar btn2"><i
+                            class="fa-solid fa-trash" (click)="delete(user.id)"></i></button>
+                </td>
+            </tr>
+        </tbody>  
+        
+
+    </table>
+    <pagination-controls (pageChange)="p = $event" class="page_nav"></pagination-controls>  
+    </div>
+   <div>
+    
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="cls-btn" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body dialogForm ">
+                <form [formGroup]="updataData" (ngSubmit)="onUpdate()" class="form">
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label label-form">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inpname" controls class="form-input"
+                                formControlName="name" [(ngModel)]="userData.name">
+                            <div class="alert">
+                                <span *ngIf=" (n['name'].touched ||n['name'].dirty)">
+                                    <span class="text-danger" *ngIf="n['name'].errors?.['required'] ">
+                                        Please fill the Name
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ///email// -->
+                    <div class="row mb-3">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label label-form">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inpemail" controls class="form-input"
+                                formControlName="email" [(ngModel)]="userData.email">
+                            <div class="alert">
+                                <span *ngIf=" (n['email'].touched ||n['email'].dirty) ">
+                                    <span class="text-danger" *ngIf="n['email'].errors?.['required'] ">
+                                        Please fill the Email
+                                    </span>
+                                    <span class="text-danger" *ngIf="n['email'].errors?.['pattern'] ">
+                                        Create unique Email
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DOB -->
+
+                    <div class="row mb-3">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label label-form">DOB</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="inpdob" controls class="form-input"
+                                formControlName="dob" [(ngModel)]="userData.dob">
+                            <div class="alert">
+                                <span *ngIf=" (n['dob'].touched ||n['dob'].dirty) ">
+                                    <span class="text-danger" *ngIf="n['dob'].errors?.['required'] ">
+                                        Please fill the DOB
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PhoneNumber -->
+
+                    <div class="row mb-3">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label label-form">PhoneNumber</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inpphonenumber" controls class="form-input"
+                                formControlName="phonenumber" [(ngModel)]="userData.phonenumber">
+                            <div class="alert">
+                                <span *ngIf=" (n['phonenumber'].touched ||n['phonenumber'].dirty) ">
+                                    <span class="text-danger" *ngIf="n['phonenumber'].errors?.['required'] ">
+                                        Please fill the Number
+                                    </span>
+                                    <span class="text-danger" *ngIf="n['phonenumber'].errors?.['maxlength'] ">
+                                        Maximum 10 numbers
+                                    </span>
+                                    <span class="text-danger" *ngIf="n['phonenumber'].errors?.['minlength'] ">
+                                        Minimum 10 numbers
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary btn-dialog" data-bs-dismiss="modal"
+                        id="btn-dailog1">Close</button>
+                    <button class="btn-dialog " id="btn-dailog2" type="submit" data-bs-dismiss="modal">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    border: 2px solid;
+    width: 45vw;
+    height: 65vh;
+    margin-left: 25vw;
+    margin-top: 3vh;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.form {
+    margin-top: 1vh;
+    padding: 20px;
+}
+.label-form{
+    font-size: 2.1vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form-input{
+    outline: none;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    background-color: transparent;
+}
+#inpname {
+    margin-left: 7vw;
+}
+#inpemail {
+    margin-left: 7vw;   
+}
+#inpdob { 
+    margin-left: 7vw;
+    width: 49%;
+}
+#inppassword {
+    margin-left:7vw;
+}
+#inpphonenumber {
+    margin-left: 7vw;
+}
+.alert{
+    font-size: 1.2vw;
+    margin-left: 7vw;
+}
+.btn1 {
+    font-size: 1.7vw;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: rgb(12, 224, 252);
+    margin-left: 10vw;   
+}
+.row-separate{
+    margin-bottom: 15px;
+}
+@media screen and (max-width:800px){
+    .container {
+        width: 60vw;
+        height: 65vh;
+        margin-left: 25vw;
+    }
+    .label-form{
+        font-size: 3vw;
+    }
+    .form-input{
+        font-size: 2.5vw; 
+    }
+    #inpname {
+        margin-left:10vw;
+    }
+    #inpemail {
+        margin-left:10vw;   
+    }
+    #inpdob { 
+        margin-left: 10vw;
+        width: 65%;
+    }
+    #inppassword {
+        margin-left: 10vw;
+    }
+    #inpphonenumber {
+        margin-left: 10vw;
+    } 
+    .btn1 {
+        margin-top: 1vh;
+        font-size: 2.5vw;
+        margin-left: 20vw;   
+    }
+    .alert{
+        font-size:2vw;
+        margin-left:10vw;
+    }
+
+}
+
+@media screen and (max-width:430px){
+    .container {
+        border: 2px solid;
+        width: 75vw;
+        height: 65vh;
+        border: none;  
+        margin-left: 20vw; 
+    }
+    .form {
+        align-items: center;
+        padding: 10px;   
+        margin-top: 0vh; 
+    }
+    .label-form{
+        font-size: 4.5vw;
+        margin-left: 5vw;
+    }
+    .form-input{
+        font-size: 4vw; 
+    }
+    .alert{
+        font-size: 3.4vw;
+        margin-left: 10vw;
+    }
+    .btn1 {
+        font-size: 3.5vw;
+        margin-left: 15vw;   
+    }
+
+} 

@@ -1,0 +1,21 @@
+
+<div>
+    
+    <div class="btn" [hidden]="isLoggedIn()">
+      
+        <button class="btn1" type="submit" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Register</button>
+        <button class="btn2" type="submit" routerLink="sign-in" routerLinkActive="active">Sign-in</button>
+       
+    </div>
+    <div [hidden]="!isLoggedIn()" class="nav">
+        <p class="label-1">User-id:{{userName}}</p>
+        <button class="btn3" type="submit"  [hidden]="!isLoggedIn()" (click)="logout()">Log-Out</button>
+    </div>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+  </div>
+  
+
+

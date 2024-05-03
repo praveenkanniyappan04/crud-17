@@ -1,0 +1,124 @@
+
+<div class="container">
+    <div class="row">
+        <form [formGroup]="biodata" (ngSubmit)="onSubmit()" class="form" autocomplete="off">
+            <!-- new update -->
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label label-form">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inpname" controls class="form-input"
+                        formControlName="name">
+                    <div class="alert">
+                        <span *ngIf=" (n['name'].touched ||n['name'].dirty)">
+                            <span class="text-danger" *ngIf="n['name'].errors?.['required'] ">
+                                Please fill the Name
+                            </span>
+                            <span class="text-danger" *ngIf="n['name'].errors?.['pattern'] ">
+                                Only Characters 
+                            </span>
+                            <span class="text-danger" *ngIf="n['name'].errors?.['maxlength'] ">
+                                Maxmium 30 Characters Only
+                            </span>
+                            <span class="text-danger" *ngIf="n['name'].errors?.['minlength'] ">
+                                Minimum 3 Characters Only
+                            </span>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ///email// -->
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label label-form">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inpemail" controls class="form-input"
+                        formControlName="email">
+                    <div class="alert">
+                        <span *ngIf=" (n['email'].touched ||n['email'].dirty) ">
+                            <span class="text-danger" *ngIf="n['email'].errors?.['required'] ">
+                                Please fill the Email
+                            </span>
+                            <span class="text-danger" *ngIf="n['email'].errors?.['pattern'] ">
+                               Email is Invalid
+                            </span>
+                            <span class="text-danger" *ngIf="n['email'].errors?.['maxlength'] ">
+                                Maxmium 15 Characters Only
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- DOB -->
+
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label label-form">DOB</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inpdob" controls class="form-input"
+                        formControlName="dob">
+                    <div class="alert">
+                        <span *ngIf=" (n['dob'].touched ||n['dob'].dirty) ">
+                            <span class="text-danger" *ngIf="n['dob'].errors?.['required'] ">
+                                Please fill the DOB
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label label-form">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inppassword" controls class="form-input"
+                        formControlName="password">
+                    <div class="alert">
+                        <span *ngIf=" (n['password'].touched ||n['password'].dirty) ">
+                            <span class="text-danger" *ngIf="n['password'].errors?.['required'] ">
+                                Please fill the Password
+                            </span>
+                            <span class="text-danger" *ngIf="n['password'].errors?.['pattern'] ">
+                                Password must contain at least one uppercase letter, one lowercase letter, one special character, and no spaces
+                            </span>
+                            <span class="text-danger" *ngIf="n['password'].errors?.['maxlength'] ">
+                                Maxmium-10 Characters Only
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- PhoneNumber -->
+
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label label-form">PhoneNumber</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inpphonenumber" controls class="form-input" formControlName="phonenumber">
+                    <div class="alert">
+                        <span *ngIf=" (n['phonenumber'].touched ||n['phonenumber'].dirty) ">
+                            <span class="text-danger" *ngIf="n['phonenumber'].errors?.['required'] ">
+                                Please fill the Number
+                            </span>
+                            <span class="text-danger" *ngIf="n['phonenumber'].errors?.['pattern'] ">
+                               Only number 
+                            </span>
+                            <span class="text-danger" *ngIf="n['phonenumber'].errors?.['maxlength'] ">
+                                Maximum 10 numbers
+                            </span>
+                            <span class="text-danger" *ngIf="n['phonenumber'].errors?.['minlength'] ">
+                                Minimum 10 numbers
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                <div class="text-center" *ngIf="this.loading">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div> 
+                <button class=" col-5 mt-4 btn1" [disabled]="this.loading" type="submit=true">Register</button>
+            
+        </form>
+    </div>
+</div>
+
